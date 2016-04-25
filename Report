@@ -10,10 +10,10 @@ NOTE: write down the security group name
 NOTE: Use the same security group you previously modified. After launching one instance, can use 'launch more like this' to simplify
 - Attach the previously created Elastic IPs to the EC2 instances
 - Make the elastic IP entries in the 'hosts' file
-- rm -f .ssh/known_hosts
-(If required, i.e., Key signature changes on every time an instance is destroyed and created )
 - ssh-keygen -f "~/.ssh/known_hosts" -R [IP]
-(This will add the instance with IP to the known_hosts)
+(If required, i.e., Key signature changes on every time an instance is destroyed and created )
+- ssh-keyscan [host] >> ~/.ssh/known_hosts
+(Add instance signatures to known hosts)
 - use the script.sh to run the playbook
 (NOTE: username on amazon linux VM is ec2-user, and on ubuntu VM is ubuntu)
 
