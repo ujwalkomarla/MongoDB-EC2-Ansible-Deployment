@@ -1,2 +1,5 @@
 rs.initiate();
+cfg = rs.conf()
+cfg.members[0].host = "{{ groups["mongod_primary"][0] }}:{{ hostvars[groups["mongod_primary"][0]]["mongod_port"] }}"
+rs.reconfig(cfg)
 printjson(rs.status());
