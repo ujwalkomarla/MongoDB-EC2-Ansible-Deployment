@@ -6,8 +6,3 @@
   args:
     creates: initiateReplicaset
 
-- name: Add the admin user to the replicaset
-  mongodb_user: database=admin name=admin password={{ mongo_admin_pass }} login_port={{ mongod_port }} roles='root' state=present
-  ignore_errors: yes
-
-
