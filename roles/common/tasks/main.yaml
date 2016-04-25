@@ -3,11 +3,11 @@
   copy: src=team.txt dest=/root/team.txt
 
 - name: Create the mongod user
-  user: name=mongod 
+  user: name=mongodb 
 
 #- shell: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 - name: Add 10gen official apt source to sources list
-  apt_key: keyserver=keyserver.ubuntu.com:80 id=7F0CEB10
+  apt_key: keyserver=keyserver.ubuntu.com id=7F0CEB10
   register: keyserver
 
 - shell: echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/10gen.list
@@ -28,8 +28,8 @@
 - name: Create the necessary directory for the namenode metadata
   file: 
     path: "{{ item }}" 
-    owner: mongod 
-    group: mongod
+    owner: mongodb 
+    group: mongodb
     state: directory
   with_items:
     - "{{mongodb_datadir}}"

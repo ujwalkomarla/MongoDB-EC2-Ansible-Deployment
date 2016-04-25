@@ -10,11 +10,11 @@
   roles:
     - role: mongod_p
   become: yes
-  become_user: mongod
+  become_user: mongodb
 
 - name: Secondary
   hosts: mongod_secondary
   roles:
     - role: mongod_s
   become: yes
-  become_user: mongod
+  become_user: mongodb
