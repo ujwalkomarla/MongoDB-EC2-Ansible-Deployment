@@ -16,3 +16,7 @@ NOTE: Use the same security group you previously modified. After launching one i
 (This will add the instance with IP to the known_hosts)
 - use the script.sh to run the playbook
 (NOTE: username on amazon linux VM is ec2-user, and on ubuntu VM is ubuntu)
+
+GIT https://github.ncsu.edu/uskomarl/hpcc5.git
+
+REFERENCE:https://github.com/a-h/ansible-mongodb-cluster

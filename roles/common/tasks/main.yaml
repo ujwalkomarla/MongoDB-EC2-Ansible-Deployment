@@ -17,7 +17,13 @@
   apt: update_cache=yes
 
 - name: Install MondoDB
-  apt: name=mongodb-10gen state=present
+  apt: name="{{item}}" state=present
+  with_items:
+    - mongodb-10gen
+    - python-pip 
+    - python-dev
+    - build-essential 
+- pip: name=pymongo
 
 - name: Create the necessary directory for the namenode metadata
   file: 
@@ -41,6 +47,15 @@
       #- {regexp: '^dbpath',line: 'dbpath=/data'}
       #- {regexp: '^replSet',line: 'replSet=rs'}
       #notify: restart MongoDB
+
+- name: Create the iptables file
+  template: src=iptables.j2 dest=/tmp/iptables.rules
+
+- name: Update iptable
+  shell: iptables-restore < /tmp/iptables.rules
+  args: 
+    creates: updateIptable
+  notify: restart iptables 
 
 - name: config mongodb
   template: src=mongodb.conf.j2 dest=/etc/mongodb.conf

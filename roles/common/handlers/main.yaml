@@ -3,3 +3,6 @@
     name: mongodb
     state: restarted
     enabled: yes
+
+- name: restart iptables
+  service: name=ufw  state=restarted enabled=yes

@@ -4,3 +4,17 @@
     - role: common
   become: yes
   become_method : sudo
+
+- name: Primary
+  hosts: mongod_primary
+  roles:
+    - role: mongod_p
+  become: yes
+  become_user: mongod
+
+- name: Secondary
+  hosts: mongod_secondary
+  roles:
+    - role: mongod_s
+  become: yes
+  become_user: mongod
