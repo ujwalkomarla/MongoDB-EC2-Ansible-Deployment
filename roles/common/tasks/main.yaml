@@ -20,10 +20,10 @@
   apt: name="{{item}}" state=present
   with_items:
     - mongodb-10gen
-    - python-pip 
-    - python-dev
-    - build-essential 
-- pip: name=pymongo
+#    - python-pip 
+#    - python-dev
+#    - build-essential 
+#- pip: name=pymongo
 
 - name: Create the necessary directory for the namenode metadata
   file: 
