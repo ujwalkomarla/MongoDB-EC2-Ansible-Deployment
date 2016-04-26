@@ -5,7 +5,7 @@
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
 {% if 'mongod_servers' in group_names %}
-{% for host in groups['mongod_servers'] %}
+{% for host in groups['mongod_primary'] %}
 -A INPUT -p tcp  --dport {{ hostvars[host]['mongod_port'] }} -j  ACCEPT
 {% endfor %}
 {% endif %}
