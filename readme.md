@@ -13,7 +13,7 @@ NOTE: Use the same security group you previously modified. After launching one i
     + [mongod_servers]: ALL The Three Instance IPs
     + [mongod_primary]: One Instance IP
     + [mongod_secondary]: Two Instance IPs
-- ssh-keygen -f "/home/ujwal/.ssh/known_hosts" -R {IP}  
+- ssh-keygen -f "/home/{yourusername}/.ssh/known_hosts" -R {IP}  
 NOTE: Only if required, i.e., Key signature changes on every time an instance is destroyed and created.
 - ssh-keyscan {IP} >> ~/.ssh/known_hosts  
 NOTE: Add instance signatures to known hosts
