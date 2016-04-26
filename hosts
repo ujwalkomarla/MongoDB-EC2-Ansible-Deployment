@@ -1,8 +1,4 @@
 # The site wide list of mongodb servers
-[mongod_servers]
-52.8.80.197 mongod_port=27017
-52.8.165.244 mongod_port=27017
-52.8.204.186 mongod_port=27017
 [mongod_primary]
 52.8.80.197 mongod_port=27017
 [mongod_secondary]
