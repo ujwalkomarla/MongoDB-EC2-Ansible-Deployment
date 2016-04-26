@@ -15,7 +15,6 @@ NOTE: write down the security group name
 NOTE: Use the same security group you previously modified. After launching one instance, can use 'launch more like this' to simplify
 - Attach the previously created Elastic IPs to the EC2 instances
 - Make the elastic IP entries in the 'hosts' file under groups
-    + [mongod_servers]: ALL The Three Instance IPs
     + [mongod_primary]: One Instance IP
     + [mongod_secondary]: Two Instance IPs
 - ssh-keygen -f "/home/{yourusername}/.ssh/known_hosts" -R {IP}  
