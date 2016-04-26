@@ -1,3 +1,8 @@
+##Team Members:  
+-Nasrulla Khan Haris  
+-Prashant Narayan Kulkarni  
+-Ujwal Komarla  
+
 # MongoDB on EC2 using Ansible#
 - Create and download key pair from: [AWS EC2 Keypair Link](https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#KeyPairs:sort=keyName)
 - SSH setup:
