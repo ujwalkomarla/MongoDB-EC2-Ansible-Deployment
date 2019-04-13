@@ -29,8 +29,6 @@ NOTE: Add instance signatures to known hosts
 - Prashant Narayan Kulkarni  
 - Ujwal Komarla  
 
-[GITHUB](https://github.com/ujwalkomarla/MongoDB-EC2-Ansible-Deployment.git)
-
 REFERENCE:
 [1](https://sebastianvoss.com/docker-mongodb-sharded-cluster.html)
 [2](https://github.com/a-h/ansible-mongodb-cluster)
