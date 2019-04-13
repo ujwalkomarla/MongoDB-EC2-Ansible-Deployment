@@ -1,9 +1,10 @@
-##Team Members:  
--Nasrulla Khan Haris  
--Prashant Narayan Kulkarni  
--Ujwal Komarla  
+# ECE 592: High Performance Cloud Computing Services
+## Project 5 - Mongo DB Cluster Deployment on AWS w/ Ansible
 
-# MongoDB on EC2 using Ansible#
+### ![Project Description](CloudHomework5.pdf)
+Write an ansible playbook to configure 3 VMs in Amazon AWS as a Mongo DB cluster. 
+
+### Deployment Steps
 - Create and download key pair from: [AWS EC2 Keypair Link](https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#KeyPairs:sort=keyName)
 - SSH setup:
     + ssh-agent bash
@@ -23,8 +24,12 @@ NOTE: Only if required, i.e., Key signature changes on every time an instance is
 NOTE: Add instance signatures to known hosts
 - use the script.sh to run the playbook  
 
+## Team Members:  
+- Nasrulla Khan Haris  
+- Prashant Narayan Kulkarni  
+- Ujwal Komarla  
 
-[GITHUB](https://github.ncsu.edu/uskomarl/hpcc5.git)
+[GITHUB](https://github.com/ujwalkomarla/MongoDB-EC2-Ansible-Deployment.git)
 
 REFERENCE:
 [1](https://sebastianvoss.com/docker-mongodb-sharded-cluster.html)
